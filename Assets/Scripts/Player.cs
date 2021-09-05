@@ -60,25 +60,24 @@ public class Player : MonoBehaviour
 
     private void Player_Jump()
     {
-        if (CheckGrounded(0)) // is grounded
+        if (CheckGrounded(1)) // is grounded
         {
-           if (!_jumped)
+            if (!_jumped)
             {
                 if (Input.GetButtonDown("Jump"))
                 {
-                        _velocity.y = _jumpForce;
-                        _playerAnimation.Jumping(true);
-                        _playerAnimation.Falling(false);
-                        _jumped = true;
-                    
-
+                    _velocity.y = _jumpForce;
+                    _playerAnimation.Jumping(true);
+                    //_playerAnimation.Falling(false);
+                    _jumped = true;
+                    StartCoroutine(ResetJumpRoutine());
                 }
             }
             else
             {
                 _playerAnimation.Jumping(false);
                 _jumped = false;
-                _playerAnimation.Falling(false);
+                // _playerAnimation.Falling(false);
             }
 
         }
@@ -86,7 +85,7 @@ public class Player : MonoBehaviour
         {
             if (!_jumped) // player is falling
             {
-             //   _playerAnimation.Falling(true);
+                //   _playerAnimation.Falling(true);
             }
         }
 
@@ -107,6 +106,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
+
                     return false;
                 }
                 break;
@@ -114,8 +114,15 @@ public class Player : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.75f, 1 << 8); // layers are done using a 32-bit integer bit mask. 32 possible lyers.
                 if (hit.collider != null)
                 {
-                    Debug.Log(hit.collider.name);
-                    return true;
+                    if (!_resetJump)
+                    {
+                        return true;
+
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
                 else
                 {
@@ -137,6 +144,17 @@ public class Player : MonoBehaviour
             _playerAnimation.Attack();
         }
     }
+
+    private bool _resetJump = false;
+
+    IEnumerator ResetJumpRoutine()
+    {
+        _resetJump = true;
+        yield return new WaitForSecondsRealtime(0.1f);
+        _resetJump = false;
+    }
+
+
 
 
 
