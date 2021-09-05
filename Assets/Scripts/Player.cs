@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    #region Variable_Declarations
     [Header("Objects")]
     private Rigidbody2D _body;
     private BoxCollider2D _collider;
@@ -17,9 +18,14 @@ public class Player : MonoBehaviour
     [SerializeField] private float _jumpForce = 7.5f;
     private bool _isGrounded = false;
     private bool _jumped = false;
+    private bool _resetJump = false;
 
+    [Header("Misc")]
     private Vector3 _currentSpriteGameObjectScale;
 
+    #endregion
+
+    #region Start
     void Start()
     {
         GetObjects();
@@ -32,6 +38,9 @@ public class Player : MonoBehaviour
         _playerAnimation = GetComponent<PlayerAnimation>();
     }
 
+    #endregion
+
+    #region Update
     void Update()
     {
         Player_Movement();
@@ -135,7 +144,16 @@ public class Player : MonoBehaviour
         }
     }
 
+    IEnumerator ResetJumpRoutine()
+    {
+        _resetJump = true;
+        yield return new WaitForSecondsRealtime(0.1f);
+        _resetJump = false;
+    }
+
     #endregion
+
+    #region Player_Attack
 
     private void Player_Attack()
     {
@@ -145,17 +163,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private bool _resetJump = false;
+    #endregion
 
-    IEnumerator ResetJumpRoutine()
-    {
-        _resetJump = true;
-        yield return new WaitForSecondsRealtime(0.1f);
-        _resetJump = false;
-    }
-
-
-
-
-
+    #endregion
 }
