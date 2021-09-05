@@ -5,8 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Objects")]
-    private BoxCollider2D _collider;
     private Rigidbody2D _body;
+    private BoxCollider2D _collider;
+    private PlayerAnimation _playerAnimation;
 
     [Header("Movement")]
     [SerializeField] private float _speed = 2.5f;
@@ -15,19 +16,25 @@ public class Player : MonoBehaviour
     [Header("Jumping")]
     [SerializeField] private float _jumpForce = 7.5f;
     private bool _isGrounded = false;
+    private bool _jumped = false;
 
-    // Start is called before the first frame update
+    private Vector3 _currentSpriteGameObjectScale;
+
     void Start()
+    {
+        GetObjects();
+    }
+
+    private void GetObjects()
     {
         _collider = GetComponent<BoxCollider2D>();
         _body = GetComponent<Rigidbody2D>();
+        _playerAnimation = GetComponent<PlayerAnimation>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Player_Movement();
-
     }
 
     #region Player_Movement
@@ -36,6 +43,8 @@ public class Player : MonoBehaviour
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal"); // GetAxisRaw isn't gradual. Only ever -1, 0, or 1
         float verticalInput = Input.GetAxisRaw("Vertical");
+
+        _playerAnimation.Move(horizontalInput);
 
         _velocity.x = horizontalInput * _speed;
         _velocity.y = _body.velocity.y;
@@ -50,10 +59,36 @@ public class Player : MonoBehaviour
 
     private void Player_Jump()
     {
-        if (Input.GetButtonDown("Jump") && CheckGrounded(1))
+        if (CheckGrounded(0)) // is grounded
         {
-            _velocity.y = _jumpForce;
+           if (!_jumped)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                        _velocity.y = _jumpForce;
+                        _playerAnimation.Jumping(true);
+                        _playerAnimation.Falling(false);
+                        _jumped = true;
+                    
+
+                }
+            }
+            else
+            {
+                _playerAnimation.Jumping(false);
+                _jumped = false;
+                _playerAnimation.Falling(false);
+            }
+
         }
+        else // isn't grounded
+        {
+            if (!_jumped) // player is falling
+            {
+             //   _playerAnimation.Falling(true);
+            }
+        }
+
     }
 
 
@@ -62,7 +97,7 @@ public class Player : MonoBehaviour
     /// </summary>
     private bool CheckGrounded(int version)
     {
-        switch(version)
+        switch (version)
         {
             case 0: // VELOCITY CHECK
                 if (_body.velocity.y == 0)
@@ -93,6 +128,8 @@ public class Player : MonoBehaviour
     }
 
     #endregion
+
+
 
 
 
