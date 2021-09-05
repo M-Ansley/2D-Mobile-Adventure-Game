@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Player_Movement();
+        Player_Attack();
     }
 
     #region Player_Movement
@@ -129,7 +130,13 @@ public class Player : MonoBehaviour
 
     #endregion
 
-
+    private void Player_Attack()
+    {
+        if (Input.GetMouseButtonDown(0) && CheckGrounded(0))
+        {
+            _playerAnimation.Attack();
+        }
+    }
 
 
 

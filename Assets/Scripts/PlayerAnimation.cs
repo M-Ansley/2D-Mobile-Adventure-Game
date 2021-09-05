@@ -7,6 +7,7 @@ public class PlayerAnimation : MonoBehaviour
     [Header("Objects")]
     private Animator _animator;
     private GameObject _spriteGameObject;
+    private Animator _swordAnimator;
 
     private Vector3 _currentSpriteGameObjectScale;
 
@@ -20,6 +21,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         _spriteGameObject = transform.Find("Sprite").gameObject;
         _animator = _spriteGameObject.GetComponent<Animator>();
+        _swordAnimator = _spriteGameObject.transform.Find("SwordArc").gameObject.GetComponent<Animator>();
     }
 
     private void SetDefaults()
@@ -57,6 +59,12 @@ public class PlayerAnimation : MonoBehaviour
     public void Falling(bool falling)
     {
         _animator.SetBool("Falling", falling);
+    }
+
+    public void Attack()
+    {
+        _animator.SetTrigger("Attack");
+        _swordAnimator.SetTrigger("Attack");
     }
 
 }
