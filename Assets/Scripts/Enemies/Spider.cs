@@ -9,5 +9,16 @@ public class Spider : Enemy
     {
         Attack();
     }
-    
+
+    public override void Attack()
+    {
+        base.Attack();
+        Debug.Log("This is the spider Attack");
+    }
+
+    public override void Update()
+    {
+        
+    }
+
 }

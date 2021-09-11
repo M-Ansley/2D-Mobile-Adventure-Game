@@ -5,15 +5,17 @@ using UnityEngine;
 /// <summary>
 /// Abstract class (specific enemies inherit from this)
 /// </summary>
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
     [Header("Enemy Properties (Common)")]
     [SerializeField] protected int health;
     [SerializeField] protected int speed;
-    protected int gems;
+    [SerializeField] protected int gems;
 
-    public void Attack()
+    public virtual void Attack()
     {
         Debug.Log("My name is: " + this.gameObject.name);
     }
+
+    public abstract void Update(); // initialise it like this; no implementation code. Forces us to have unique implementations
 }
