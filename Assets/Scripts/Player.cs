@@ -157,9 +157,17 @@ public class Player : MonoBehaviour
 
     private void Player_Attack()
     {
-        if (Input.GetMouseButtonDown(0) && CheckGrounded(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            _playerAnimation.Attack();
+            if (CheckGrounded(1))
+            {
+                _playerAnimation.Attack();
+
+            }
+            else
+            {
+               // Debug.Log("Not grounded");
+            }
         }
     }
 

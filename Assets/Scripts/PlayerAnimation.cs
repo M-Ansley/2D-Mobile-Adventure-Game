@@ -66,5 +66,4 @@ public class PlayerAnimation : MonoBehaviour
         _animator.SetTrigger("Attack");
         _swordAnimator.SetTrigger("Attack");
     }
-
 }
