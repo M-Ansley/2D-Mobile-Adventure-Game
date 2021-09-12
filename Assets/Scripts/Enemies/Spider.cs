@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Spider : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        Attack();
-    }
-
-    public override void Attack()
-    {
-        base.Attack();
-        Debug.Log("This is the spider Attack");
+        targetPoint = pointA;
+        Initialise();
     }
 
     public override void Update()
     {
-        
-    }
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            return;
+        }
 
+        FlipSprite();
+        CheckWaypoints();
+        MoveToPoint();
+    }
 }

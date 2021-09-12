@@ -1,12 +1,690 @@
 fileFormatVersion: 2
 guid: db37a80a2d2b4c340a257c03b1a0f6a4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1974895838090585116
+    second: Spider_Idle_0
+  - first:
+      213: 1829324309001267361
+    second: Spider_Idle_1
+  - first:
+      213: 3062135226306828002
+    second: Spider_Idle_2
+  - first:
+      213: -2704754160999275011
+    second: Spider_Idle_3
+  - first:
+      213: 8955776280775515899
+    second: Spider_Idle_4
+  - first:
+      213: 3857004015402991681
+    second: Spider_Idle_5
+  - first:
+      213: 3212631659527141565
+    second: Spider_Idle_6
+  - first:
+      213: 4979347207375379644
+    second: Spider_Idle_7
+  - first:
+      213: 7916050020939741323
+    second: Spider_Idle_8
+  - first:
+      213: -4747240820423046676
+    second: Spider_Idle_9
+  - first:
+      213: 1208901970890339436
+    second: Spider_Idle_10
+  - first:
+      213: -4170703418614464275
+    second: Spider_Idle_11
+  - first:
+      213: 8078948819087256444
+    second: Spider_Idle_12
+  - first:
+      213: 7797716722759442210
+    second: Spider_Idle_13
+  - first:
+      213: 5654787049649043539
+    second: Spider_Idle_14
+  - first:
+      213: -980554113034145813
+    second: Spider_Idle_15
+  - first:
+      213: -7877696303373150740
+    second: Spider_Idle_16
+  - first:
+      213: 4059299696266438900
+    second: Spider_Idle_17
+  - first:
+      213: -6119093314500553295
+    second: Spider_Idle_18
+  - first:
+      213: 197223881733233322
+    second: Spider_Idle_19
+  - first:
+      213: 5332316270763967468
+    second: Spider_Idle_20
+  - first:
+      213: 8385869466218651765
+    second: Spider_Idle_21
+  - first:
+      213: 958572440944123046
+    second: Spider_Idle_22
+  - first:
+      213: 6004316543036914825
+    second: Spider_Idle_23
+  - first:
+      213: 2685614830657090247
+    second: Spider_Idle_24
+  - first:
+      213: -7284989162055999987
+    second: Spider_Idle_25
+  - first:
+      213: -7087394729662230421
+    second: Spider_Idle_26
+  - first:
+      213: 6677662598497224277
+    second: Spider_Idle_27
+  - first:
+      213: -7097949609972780277
+    second: Spider_Idle_28
+  - first:
+      213: 5591065825283646386
+    second: Spider_Idle_29
+  - first:
+      213: -7602619246453278136
+    second: Spider_Idle_30
+  - first:
+      213: -7467792052149743615
+    second: Spider_Idle_31
+  - first:
+      213: 2074739496735582789
+    second: Spider_Idle_32
+  - first:
+      213: -847092462461773871
+    second: Spider_Idle_33
+  - first:
+      213: 838970378262575824
+    second: Spider_Idle_34
+  - first:
+      213: 3855225227003284971
+    second: Spider_Idle_35
+  - first:
+      213: 2052631732938495888
+    second: Spider_Idle_36
+  - first:
+      213: 7325767462270602766
+    second: Spider_Idle_37
+  - first:
+      213: 6216949662497218938
+    second: Spider_Idle_38
+  - first:
+      213: -2870330624909825341
+    second: Spider_Idle_39
+  - first:
+      213: 5369370130150397096
+    second: Spider_Idle_40
+  - first:
+      213: 1146120193611220756
+    second: Spider_Idle_41
+  - first:
+      213: 5256968446556525083
+    second: Spider_Idle_42
+  - first:
+      213: -1439738988240058685
+    second: Spider_Idle_43
+  - first:
+      213: -6134547474904966154
+    second: Spider_Idle_44
+  - first:
+      213: 2151430027889140653
+    second: Spider_Idle_45
+  - first:
+      213: -6094852605429597502
+    second: Spider_Idle_46
+  - first:
+      213: 1699178901840976268
+    second: Spider_Idle_47
+  - first:
+      213: -5448355825055636801
+    second: Spider_Idle_48
+  - first:
+      213: -5985641257525975202
+    second: Spider_Idle_49
+  - first:
+      213: -722017989593328499
+    second: Spider_Idle_50
+  - first:
+      213: -2394290196906011204
+    second: Spider_Idle_51
+  - first:
+      213: -6493346048708253739
+    second: Spider_Idle_52
+  - first:
+      213: -4726967122997169277
+    second: Spider_Idle_53
+  - first:
+      213: 7000149639741460580
+    second: Spider_Idle_54
+  - first:
+      213: -7491036853677482913
+    second: Spider_Idle_55
+  - first:
+      213: -2129735371612232879
+    second: Spider_Idle_56
+  - first:
+      213: 5608800325334605322
+    second: Spider_Idle_57
+  - first:
+      213: -402707915597386819
+    second: Spider_Idle_58
+  - first:
+      213: 3667839581026061640
+    second: Spider_Idle_59
+  - first:
+      213: 4257284570186872085
+    second: Spider_Idle_60
+  - first:
+      213: -2342884949147760492
+    second: Spider_Idle_61
+  - first:
+      213: -7309369358677332849
+    second: Spider_Idle_62
+  - first:
+      213: -2143212584270343233
+    second: Spider_Idle_63
+  - first:
+      213: -6148290966171469090
+    second: Spider_Idle_64
+  - first:
+      213: 278402627161678423
+    second: Spider_Idle_65
+  - first:
+      213: 4956662416841937637
+    second: Spider_Idle_66
+  - first:
+      213: 5734728394620712279
+    second: Spider_Idle_67
+  - first:
+      213: -7143360024326664950
+    second: Spider_Idle_68
+  - first:
+      213: 5275331589262849700
+    second: Spider_Idle_69
+  - first:
+      213: -3346115418773554964
+    second: Spider_Idle_70
+  - first:
+      213: -3579104387286446291
+    second: Spider_Idle_71
+  - first:
+      213: -6651631162515622389
+    second: Spider_Idle_72
+  - first:
+      213: -4853058221786656869
+    second: Spider_Idle_73
+  - first:
+      213: 7602043660057630651
+    second: Spider_Idle_74
+  - first:
+      213: 1734663212381192441
+    second: Spider_Idle_75
+  - first:
+      213: 5220308507407140930
+    second: Spider_Idle_76
+  - first:
+      213: 1832067100218176862
+    second: Spider_Idle_77
+  - first:
+      213: -9129171058007076927
+    second: Spider_Idle_78
+  - first:
+      213: 1107284669124262097
+    second: Spider_Idle_79
+  - first:
+      213: 6484232623605191560
+    second: Spider_Idle_80
+  - first:
+      213: 4365732058261924093
+    second: Spider_Idle_81
+  - first:
+      213: 8765529079350841791
+    second: Spider_Idle_82
+  - first:
+      213: 8454028468060905468
+    second: Spider_Idle_83
+  - first:
+      213: -7441028647574752104
+    second: Spider_Idle_84
+  - first:
+      213: -3974930922665731908
+    second: Spider_Idle_85
+  - first:
+      213: 5291129220772102137
+    second: Spider_Idle_86
+  - first:
+      213: 6765017040961905844
+    second: Spider_Idle_87
+  - first:
+      213: -7256749712704416623
+    second: Spider_Idle_88
+  - first:
+      213: -7161650506440839826
+    second: Spider_Idle_89
+  - first:
+      213: -7695067939776227940
+    second: Spider_Idle_90
+  - first:
+      213: 7741215979854894911
+    second: Spider_Idle_91
+  - first:
+      213: 6742537280028146254
+    second: Spider_Idle_92
+  - first:
+      213: 3197722940741203009
+    second: Spider_Idle_93
+  - first:
+      213: -8181690924374068832
+    second: Spider_Idle_94
+  - first:
+      213: -4623012943926614594
+    second: Spider_Idle_95
+  - first:
+      213: 726920479285191981
+    second: Spider_Idle_96
+  - first:
+      213: 1366860072842157074
+    second: Spider_Idle_97
+  - first:
+      213: -2818290373972561154
+    second: Spider_Idle_98
+  - first:
+      213: -4376446737799836156
+    second: Spider_Idle_99
+  - first:
+      213: 7974939400872231130
+    second: Spider_Idle_100
+  - first:
+      213: 5357864675563518717
+    second: Spider_Idle_101
+  - first:
+      213: -7128651010110472101
+    second: Spider_Idle_102
+  - first:
+      213: 291893061718085026
+    second: Spider_Idle_103
+  - first:
+      213: 3062416151046813896
+    second: Spider_Idle_104
+  - first:
+      213: -2858026612462166109
+    second: Spider_Idle_105
+  - first:
+      213: -6899046294811575522
+    second: Spider_Idle_106
+  - first:
+      213: 6025702526393231675
+    second: Spider_Idle_107
+  - first:
+      213: 1678386648378096508
+    second: Spider_Idle_108
+  - first:
+      213: -470795533330932776
+    second: Spider_Idle_109
+  - first:
+      213: 5103666255259280268
+    second: Spider_Idle_110
+  - first:
+      213: -5601736417688755929
+    second: Spider_Idle_111
+  - first:
+      213: -5721672402192817726
+    second: Spider_Idle_112
+  - first:
+      213: -125058988791301614
+    second: Spider_Idle_113
+  - first:
+      213: 788894372531743861
+    second: Spider_Idle_114
+  - first:
+      213: 1345849620774760707
+    second: Spider_Idle_115
+  - first:
+      213: 7502026764826336971
+    second: Spider_Idle_116
+  - first:
+      213: 4128226166026364405
+    second: Spider_Idle_117
+  - first:
+      213: -9145915089278017956
+    second: Spider_Idle_118
+  - first:
+      213: -8638975637572550045
+    second: Spider_Idle_119
+  - first:
+      213: -6066084086324012608
+    second: Spider_Idle_120
+  - first:
+      213: 1037888119754692578
+    second: Spider_Idle_121
+  - first:
+      213: -662585093017597833
+    second: Spider_Idle_122
+  - first:
+      213: 6599877275430547773
+    second: Spider_Idle_123
+  - first:
+      213: -3614173194451208830
+    second: Spider_Idle_124
+  - first:
+      213: -5693770240593587632
+    second: Spider_Idle_125
+  - first:
+      213: -2904076838898484197
+    second: Spider_Idle_126
+  - first:
+      213: 4578695957675965782
+    second: Spider_Idle_127
+  - first:
+      213: 4775509206115136297
+    second: Spider_Idle_128
+  - first:
+      213: 6217418897105074743
+    second: Spider_Idle_129
+  - first:
+      213: -6815491715079804143
+    second: Spider_Idle_130
+  - first:
+      213: -5652897768365680877
+    second: Spider_Idle_131
+  - first:
+      213: -3264331847439933675
+    second: Spider_Idle_132
+  - first:
+      213: 7780287117071604070
+    second: Spider_Idle_133
+  - first:
+      213: 2724586159827409501
+    second: Spider_Idle_134
+  - first:
+      213: -4979114931181974110
+    second: Spider_Idle_135
+  - first:
+      213: -8116043663388692786
+    second: Spider_Idle_136
+  - first:
+      213: -1761892631157137057
+    second: Spider_Idle_137
+  - first:
+      213: -2682996589329994574
+    second: Spider_Idle_138
+  - first:
+      213: 7710312401247624908
+    second: Spider_Idle_139
+  - first:
+      213: 5290319539462271919
+    second: Spider_Idle_140
+  - first:
+      213: 489325419526038313
+    second: Spider_Idle_141
+  - first:
+      213: 5455335389260590647
+    second: Spider_Idle_142
+  - first:
+      213: 459632403277287380
+    second: Spider_Idle_143
+  - first:
+      213: -3334926536597701214
+    second: Spider_Idle_144
+  - first:
+      213: -890673314584879102
+    second: Spider_Idle_145
+  - first:
+      213: -2805155577117092520
+    second: Spider_Idle_146
+  - first:
+      213: 786090919692767593
+    second: Spider_Idle_147
+  - first:
+      213: 1291379356465443239
+    second: Spider_Idle_148
+  - first:
+      213: 2145034672110683707
+    second: Spider_Idle_149
+  - first:
+      213: 6318287251865464555
+    second: Spider_Idle_150
+  - first:
+      213: -5062497713159418237
+    second: Spider_Idle_151
+  - first:
+      213: 7810996847648477461
+    second: Spider_Idle_152
+  - first:
+      213: 3608492194942068740
+    second: Spider_Idle_153
+  - first:
+      213: -5877054419281260033
+    second: Spider_Idle_154
+  - first:
+      213: -5677382990742985552
+    second: Spider_Idle_155
+  - first:
+      213: 2642146121905212087
+    second: Spider_Idle_156
+  - first:
+      213: -5239200212240845260
+    second: Spider_Idle_157
+  - first:
+      213: -2348703800702582657
+    second: Spider_Idle_158
+  - first:
+      213: -2162604266700551047
+    second: Spider_Idle_159
+  - first:
+      213: -7600775183334462877
+    second: Spider_Idle_160
+  - first:
+      213: 8768326007020003578
+    second: Spider_Idle_161
+  - first:
+      213: 6741117813275405527
+    second: Spider_Idle_162
+  - first:
+      213: -7362584574641252699
+    second: Spider_Idle_163
+  - first:
+      213: 723968913008697641
+    second: Spider_Idle_164
+  - first:
+      213: 8961440166696421687
+    second: Spider_Idle_165
+  - first:
+      213: -2973829196949558617
+    second: Spider_Idle_166
+  - first:
+      213: 7946874072839154077
+    second: Spider_Idle_167
+  - first:
+      213: -2248135663889013137
+    second: Spider_Idle_168
+  - first:
+      213: 8731064336367844215
+    second: Spider_Idle_169
+  - first:
+      213: 2411438081542343859
+    second: Spider_Idle_170
+  - first:
+      213: -4108593970274582479
+    second: Spider_Idle_171
+  - first:
+      213: -4641132795626440142
+    second: Spider_Idle_172
+  - first:
+      213: -5564059910959979713
+    second: Spider_Idle_173
+  - first:
+      213: 7039552508620124579
+    second: Spider_Idle_174
+  - first:
+      213: -8292956503767886589
+    second: Spider_Idle_175
+  - first:
+      213: -4286205577611344745
+    second: Spider_Idle_176
+  - first:
+      213: 5333131745352387333
+    second: Spider_Idle_177
+  - first:
+      213: 7595736061434004990
+    second: Spider_Idle_178
+  - first:
+      213: 2949863054875971459
+    second: Spider_Idle_179
+  - first:
+      213: -3190980972849743906
+    second: Spider_Idle_180
+  - first:
+      213: 7452967201794618751
+    second: Spider_Idle_181
+  - first:
+      213: 124688556991415143
+    second: Spider_Idle_182
+  - first:
+      213: 4248214334687538878
+    second: Spider_Idle_183
+  - first:
+      213: 5332560540247642846
+    second: Spider_Idle_184
+  - first:
+      213: -322288953390863719
+    second: Spider_Idle_185
+  - first:
+      213: 546268016877172366
+    second: Spider_Idle_186
+  - first:
+      213: -4616819111443232745
+    second: Spider_Idle_187
+  - first:
+      213: 7399106874077514427
+    second: Spider_Idle_188
+  - first:
+      213: -5756485156645249394
+    second: Spider_Idle_189
+  - first:
+      213: 3474498068540313935
+    second: Spider_Idle_190
+  - first:
+      213: 5303842171310761717
+    second: Spider_Idle_191
+  - first:
+      213: -1555122352086180328
+    second: Spider_Idle_192
+  - first:
+      213: 415093339739578200
+    second: Spider_Idle_193
+  - first:
+      213: 3905517357267987209
+    second: Spider_Idle_194
+  - first:
+      213: 5498387706933999344
+    second: Spider_Idle_195
+  - first:
+      213: 4401334207848691254
+    second: Spider_Idle_196
+  - first:
+      213: 3558742734431957711
+    second: Spider_Idle_197
+  - first:
+      213: 7643475530781565612
+    second: Spider_Idle_198
+  - first:
+      213: 2773610905973563670
+    second: Spider_Idle_199
+  - first:
+      213: -6967879758822985875
+    second: Spider_Idle_200
+  - first:
+      213: 8671011679288699854
+    second: Spider_Idle_201
+  - first:
+      213: 895502169730150414
+    second: Spider_Idle_202
+  - first:
+      213: 610260561744717388
+    second: Spider_Idle_203
+  - first:
+      213: -2757863628166966748
+    second: Spider_Idle_204
+  - first:
+      213: 6610375171347652072
+    second: Spider_Idle_205
+  - first:
+      213: -686005014180326619
+    second: Spider_Idle_206
+  - first:
+      213: 6562242129605939909
+    second: Spider_Idle_207
+  - first:
+      213: -1458156491024602450
+    second: Spider_Idle_208
+  - first:
+      213: -3167274866441093967
+    second: Spider_Idle_209
+  - first:
+      213: 4064406390321775829
+    second: Spider_Idle_210
+  - first:
+      213: -8884925770612854589
+    second: Spider_Idle_211
+  - first:
+      213: 6917273692490451047
+    second: Spider_Idle_212
+  - first:
+      213: -9111322299395568720
+    second: Spider_Idle_213
+  - first:
+      213: -8542215558864635426
+    second: Spider_Idle_214
+  - first:
+      213: -2114990496308656110
+    second: Spider_Idle_215
+  - first:
+      213: -6384268169340205488
+    second: Spider_Idle_216
+  - first:
+      213: -7814258674729788498
+    second: Spider_Idle_217
+  - first:
+      213: -2810935493465028318
+    second: Spider_Idle_218
+  - first:
+      213: -1612264917993426061
+    second: Spider_Idle_219
+  - first:
+      213: 1649059798158575651
+    second: Spider_Idle_220
+  - first:
+      213: 3444863574813790596
+    second: Spider_Idle_221
+  - first:
+      213: 8175023091983766332
+    second: Spider_Idle_222
+  - first:
+      213: -4918570922976324302
+    second: Spider_Idle_223
+  - first:
+      213: -2601310867658675740
+    second: Spider_Idle_224
+  - first:
+      213: -1840169552534654895
+    second: Spider_Idle_225
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,29 +712,30 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -70,13 +749,712 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Spider_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1469c12d4d386b10800000000000000
+      internalID: 1974895838090585116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8e10154c0136910800000000000000
+      internalID: 1829324309001267361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e69a32b3c3ee7a20800000000000000
+      internalID: 3062135226306828002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5e0e4cb68c67ad0800000000000000
+      internalID: -2704754160999275011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe5e7fd31f494c70800000000000000
+      internalID: 8955776280775515899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140c95b77b4d68530800000000000000
+      internalID: 3857004015402991681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8f94c197f859c20800000000000000
+      internalID: 3212631659527141565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc51f447e13a1540800000000000000
+      internalID: 4979347207375379644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8836529d857bdd60800000000000000
+      internalID: 7916050020939741323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9437330a96e1eb0800000000000000
+      internalID: -4747240820423046676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64303fffe1e6c010800000000000000
+      internalID: 1208901970890339436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de04afd865fae16c0800000000000000
+      internalID: -4170703418614464275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7be14895213e1070800000000000000
+      internalID: 8078948819087256444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f13379b0e073c60800000000000000
+      internalID: 7797716722759442210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3587fce7cd6d97e40800000000000000
+      internalID: 5654787049649043539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef2d89ba3f5462f0800000000000000
+      internalID: -980554113034145813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5190d23fccca290800000000000000
+      internalID: -7877696303373150740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8efc01197855830800000000000000
+      internalID: 4059299696266438900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b51ab10d0d941ba0800000000000000
+      internalID: -6119093314500553295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaadee3531eacb200800000000000000
+      internalID: 197223881733233322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce30cec7561300a40800000000000000
+      internalID: 5332316270763967468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570e1ca69d7906470800000000000000
+      internalID: 8385869466218651765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac14f96e888d4d00800000000000000
+      internalID: 958572440944123046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c77ba651e935350800000000000000
+      internalID: 6004316543036914825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c236d0a578354520800000000000000
+      internalID: 2685614830657090247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ed41364f486ea90800000000000000
+      internalID: -7284989162055999987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60d1834b0484ad90800000000000000
+      internalID: -7087394729662230421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556c659e0c2dbac50800000000000000
+      internalID: 6677662598497224277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0333ffaf640f7d90800000000000000
+      internalID: -7097949609972780277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3abdfceb4779d40800000000000000
+      internalID: 5591065825283646386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84aba9463121e7690800000000000000
+      internalID: -7602619246453278136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 18455ea8698a8a547826e68e78f27273
     internalID: 0
     vertices: []
     indices: 
