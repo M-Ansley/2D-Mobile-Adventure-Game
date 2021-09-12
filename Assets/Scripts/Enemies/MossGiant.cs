@@ -12,7 +12,6 @@ public class MossGiant : Enemy
         targetPoint = pointA;
         _spriteGameObject = GetComponentInChildren<SpriteRenderer>().gameObject;
         _animator = _spriteGameObject.GetComponent<Animator>();
-        FlipSprite(false);
     }
 
     public override void Update()
@@ -21,9 +20,23 @@ public class MossGiant : Enemy
         {
             return;
         }
+
+        FlipSprite();
         CheckWaypoints();
         MoveToPoint();
 
+    }
+
+    private void FlipSprite()
+    {
+        if (targetPoint == pointA)
+        {
+            _spriteGameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            _spriteGameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
     private void CheckWaypoints()
@@ -32,38 +45,13 @@ public class MossGiant : Enemy
         {
             targetPoint = pointB;
             _animator.SetTrigger("Idle");
-            StartCoroutine(FlipSpriteCoroutine(true));
         }
         else if (transform.position == pointB.position)
         {
             targetPoint = pointA;
             _animator.SetTrigger("Idle");
-            StartCoroutine(FlipSpriteCoroutine(false));
         }
     }
 
-    private IEnumerator FlipSpriteCoroutine(bool leftToRight)
-    {
-        yield return new WaitForSecondsRealtime(1.3f);
-        // yield return !_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle");
-        FlipSprite(leftToRight);
 
-
-    }
-
-    private void FlipSprite (bool leftToRight)
-    {
-        Vector3 currentSpriteGameObjectScale = _spriteGameObject.transform.localScale;
-
-        if (leftToRight)
-        {
-            currentSpriteGameObjectScale.x = 1;
-            _spriteGameObject.transform.localScale = currentSpriteGameObjectScale;
-        }
-        else
-        {
-            currentSpriteGameObjectScale.x = -1;
-            _spriteGameObject.transform.localScale = currentSpriteGameObjectScale;
-        }
-    }
 }
