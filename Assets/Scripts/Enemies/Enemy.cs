@@ -22,8 +22,15 @@ public abstract class Enemy : MonoBehaviour
     #endregion
 
     #region Setup
+
+    private void Start()
+    {
+        Initialise(); // will in fact call the overridden version of this method in a child class
+    }
+
     protected virtual void Initialise()
     {
+        targetPoint = pointA;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
     }
@@ -31,7 +38,17 @@ public abstract class Enemy : MonoBehaviour
 
     #region Update
 
-    public abstract void Update(); // initialise it like this; no implementation code. Forces us to have unique implementations
+    public virtual void Update()
+    {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            return;
+        }
+
+        FlipSprite();
+        CheckWaypoints();
+        MoveToPoint();
+    }
 
     #endregion
 

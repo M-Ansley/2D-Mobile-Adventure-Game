@@ -4,23 +4,11 @@ using UnityEngine;
 
 public class MossGiant : Enemy
 {
-    private void Start()
+    /// <summary>
+    /// Use for intialisation
+    /// </summary>
+    protected override void Initialise()
     {
-        targetPoint = pointA;
-        Initialise();
+        base.Initialise();
     }
-
-    public override void Update()
-    {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-        {
-            return;
-        }
-
-        FlipSprite();
-        CheckWaypoints();
-        MoveToPoint();
-    } 
-
-
 }
