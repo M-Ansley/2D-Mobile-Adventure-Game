@@ -15,6 +15,7 @@ public class Skeleton : Enemy, IDamageable, IKillable
         }
         else
         {
+            isHit = true;
             animator.SetTrigger("Hit");
             animator.SetBool("InCombat", true);
         }
@@ -22,7 +23,7 @@ public class Skeleton : Enemy, IDamageable, IKillable
 
     public IEnumerator Die()
     {
-        
+        dying = true;
         animator.SetTrigger("Die");
         yield return new WaitForSecondsRealtime(0.1f);
         animator.SetBool("Dead", true);

@@ -19,9 +19,9 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected Transform pointA, pointB;
     protected Transform targetPoint;
 
-    protected bool occupied;
+    protected bool dying, isHit, inCombat;
 
-   private static Player player;
+    private static Player player;
 
     #endregion
 
@@ -48,17 +48,34 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Update()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-            return;
+            FlipSprite();
         }
 
-        FlipSprite();
-        CheckWaypoints();
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
-        {
-            MoveToPoint();
 
+        CheckWaypoints();
+        if (!isHit && !dying && !inCombat)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
+            {
+                MoveToPoint();
+            }
+
+
+        }
+
+        if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) > 1)
+        {
+            isHit = false;
+            inCombat = false;
+            animator.SetBool("InCombat", false);
+
+        }
+        else
+        {
+          //  inCombat = true;
+         //  animator.SetBool("InCombat", true);
         }
     }
 
