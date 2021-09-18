@@ -19,6 +19,10 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected Transform pointA, pointB;
     protected Transform targetPoint;
 
+    protected bool occupied;
+
+   private static Player player;
+
     #endregion
 
     #region Setup
@@ -30,6 +34,10 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Initialise()
     {
+        if (player == null)
+        {
+            player = FindObjectOfType<Player>();
+        }
         targetPoint = pointA;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
@@ -47,7 +55,11 @@ public abstract class Enemy : MonoBehaviour
 
         FlipSprite();
         CheckWaypoints();
-        MoveToPoint();
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {
+            MoveToPoint();
+
+        }
     }
 
     #endregion
