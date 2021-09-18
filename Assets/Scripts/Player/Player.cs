@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable, IKillable
 {
     #region Variable_Declarations
     [Header("Objects")]
@@ -23,12 +23,22 @@ public class Player : MonoBehaviour
     [Header("Misc")]
     private Vector3 _currentSpriteGameObjectScale;
 
+    [SerializeField] private int _health = 10;
+    public int Health
+    {
+        get { return _health; }
+        set { _health = value; }
+    }
+
+    private bool dying = false;
+
     #endregion
 
     #region Start
     void Start()
     {
         GetObjects();
+        SetInitialValues();
     }
 
     private void GetObjects()
@@ -36,6 +46,11 @@ public class Player : MonoBehaviour
         _collider = GetComponent<BoxCollider2D>();
         _body = GetComponent<Rigidbody2D>();
         _playerAnimation = GetComponent<PlayerAnimation>();
+    }
+
+    private void SetInitialValues()
+    {
+        Health = _health;
     }
 
     #endregion
@@ -173,5 +188,36 @@ public class Player : MonoBehaviour
 
     #endregion
 
+    #endregion
+
+    #region Player_Health
+    
+
+    public void Damage()
+    {
+        Health--;
+        if (Health < 1)
+        {
+            StartCoroutine(Die());
+        }
+        else
+        {
+            
+        }
+    }
+
+
+    public IEnumerator Die()
+    {
+        dying = true;
+        _playerAnimation.SetTrigger("Die");
+        yield return new WaitForSecondsRealtime(0.1f);
+        _playerAnimation.SetBool("Dead", true);
+        while (_playerAnimation.GetCurrentAnimatorStateInfo(0, "Death"))
+        {
+            yield return null;
+        }
+        Destroy(gameObject);
+    }
     #endregion
 }

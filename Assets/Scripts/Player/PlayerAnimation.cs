@@ -66,4 +66,23 @@ public class PlayerAnimation : MonoBehaviour
         _animator.SetTrigger("Attack");
         _swordAnimator.SetTrigger("Attack");
     }
+
+    #region Animator_Overrides
+    public void SetTrigger(string triggerName)
+    {
+        _animator.SetTrigger(triggerName);
+    }
+
+
+    public void SetBool(string boolName, bool value)
+    {
+        _animator.SetBool(boolName, value);
+    }
+
+    public bool GetCurrentAnimatorStateInfo(int intIdentifer, string stringIdentifier)
+    {
+       return _animator.GetCurrentAnimatorStateInfo(intIdentifer).IsName(stringIdentifier);
+    }
+
+        #endregion
 }

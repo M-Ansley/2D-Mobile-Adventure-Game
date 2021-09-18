@@ -19,7 +19,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected Transform pointA, pointB;
     protected Transform targetPoint;
 
-    protected bool dying, isHit, inCombat;
+    protected bool dying, isHit;// inCombat;
 
     private static Player player;
 
@@ -55,27 +55,37 @@ public abstract class Enemy : MonoBehaviour
 
 
         CheckWaypoints();
-        if (!isHit && !dying && !inCombat)
+        if (!isHit && !dying && !animator.GetBool("InCombat"))
         {
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
             {
                 MoveToPoint();
             }
+        }
+        try
+        {
+            if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) > 1)
+            {
+                isHit = false;
+                // inCombat = false;
+                animator.SetBool("InCombat", false);
 
+            }
+            else
+            {
+                if (animator.GetBool("InCombat"))
+                {
+                    FacePlayer();
+
+                }
+                //  inCombat = true;
+                //  animator.SetBool("InCombat", true);
+            }
 
         }
-
-        if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) > 1)
+        catch
         {
-            isHit = false;
-            inCombat = false;
-            animator.SetBool("InCombat", false);
 
-        }
-        else
-        {
-          //  inCombat = true;
-         //  animator.SetBool("InCombat", true);
         }
     }
 
@@ -84,7 +94,7 @@ public abstract class Enemy : MonoBehaviour
     #region Attacks
     public virtual void Attack()
     {
-        Debug.Log("My name is: " + this.gameObject.name);
+        // Debug.Log("My name is: " + this.gameObject.name);
     }
     #endregion
 
@@ -120,5 +130,20 @@ public abstract class Enemy : MonoBehaviour
             spriteRenderer.flipX = false;
         }
     }
-    #endregion       
+
+
+    #endregion
+    protected void FacePlayer()
+    {
+        Vector3 direction = player.transform.position - transform.position;
+        if (direction.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (direction.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+    }
+
 }
