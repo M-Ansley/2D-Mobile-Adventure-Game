@@ -7,7 +7,7 @@ public class Spider : Enemy, IDamageable
 
     public int Health { get; set; }
 
-    public void Damage()
+    public void Damage(int damageAmount = 1)
     {
 
     }

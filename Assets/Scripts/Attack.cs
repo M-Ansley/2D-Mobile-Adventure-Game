@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    [SerializeField] private int _damageAmount = 1;
     private bool _canDamage = true;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -17,13 +18,13 @@ public class Attack : MonoBehaviour
         {
             if (_canDamage)
             {
-                hit.Damage();
-                StartCoroutine(ResetJumpRoutine());
+                hit.Damage(_damageAmount);
+                StartCoroutine(ResetAttackRoutine());
             }
         }
     }
 
-    IEnumerator ResetJumpRoutine()
+    IEnumerator ResetAttackRoutine()
     {
         _canDamage = false;
         yield return new WaitForSecondsRealtime(0.5f);

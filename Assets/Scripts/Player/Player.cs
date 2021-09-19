@@ -191,11 +191,11 @@ public class Player : MonoBehaviour, IDamageable, IKillable
     #endregion
 
     #region Player_Health
-    
 
-    public void Damage()
+
+    public void Damage(int damageAmount = 1)
     {
-        Health--;
+        Health -= damageAmount;
         if (Health < 1)
         {
             StartCoroutine(Die());

@@ -146,4 +146,18 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
+
+    public IEnumerator Die()
+    {
+        dying = true;
+        animator.SetTrigger("Die");
+        yield return new WaitForSecondsRealtime(0.1f);
+        animator.SetBool("Dead", true);
+        while (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {
+            yield return null;
+        }
+        Destroy(transform.parent.gameObject);
+    }
+
 }
