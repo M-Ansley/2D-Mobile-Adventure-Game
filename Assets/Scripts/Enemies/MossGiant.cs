@@ -3,13 +3,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MossGiant : Enemy, IDamageable
+public class MossGiant : Enemy, IDamageable, IKillable
 {
    public int Health { get; set; }
 
     public void Damage()
     {
+        Health--;
+        if (Health < 1)
+        {
+            StartCoroutine(Die());
+        }
+        else
+        {
+            isHit = true;
+            animator.SetTrigger("Hit");
+            animator.SetBool("InCombat", true);
+        }
+    }
 
+    public IEnumerator Die()
+    {
+        dying = true;
+        animator.SetTrigger("Die");
+        yield return new WaitForSecondsRealtime(0.1f);
+        animator.SetBool("Dead", true);
+        while (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {
+            yield return null;
+        }
+        Destroy(transform.parent.gameObject);
     }
 
     //[Flags]
