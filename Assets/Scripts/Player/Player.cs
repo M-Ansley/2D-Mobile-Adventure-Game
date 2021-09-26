@@ -23,6 +23,8 @@ public class Player : MonoBehaviour, IDamageable, IKillable
     [Header("Misc")]
     private Vector3 _currentSpriteGameObjectScale;
 
+    [Header("Health")]
+
     [SerializeField] private int _health = 10;
     public int Health
     {
@@ -31,6 +33,14 @@ public class Player : MonoBehaviour, IDamageable, IKillable
     }
 
     private bool dying = false;
+
+    [Header("Gems")]
+    [SerializeField] private int _gems = 0;
+    public int Gems
+    {
+        get { return _gems; }
+        set { _gems = value; }
+    }
 
     #endregion
 

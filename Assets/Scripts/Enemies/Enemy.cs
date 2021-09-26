@@ -15,6 +15,8 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float speed = 2;
     [SerializeField] protected int gems;
 
+    [SerializeField] protected GameObject diamondPrefab;
+
     protected SpriteRenderer spriteRenderer;
     protected Animator animator;
 
@@ -24,6 +26,7 @@ public abstract class Enemy : MonoBehaviour
     protected bool dying, isHit;// inCombat;
 
     private static Player player;
+
 
     #endregion
 
@@ -208,6 +211,10 @@ public abstract class Enemy : MonoBehaviour
 
     public IEnumerator Die()
     {
+        if (!dying)
+        {
+
+        
         dying = true;
         animator.SetTrigger("Die");
         yield return new WaitForSecondsRealtime(0.1f);
@@ -216,9 +223,29 @@ public abstract class Enemy : MonoBehaviour
         {
             yield return null;
         }
+        SpawnDiamond();
         Destroy(transform.parent.gameObject);
+        }
     }
 
     #endregion
 
+    #region Gems
+
+    public void SpawnDiamond()
+    {
+        try
+        {
+            GameObject diamondObj = Instantiate(diamondPrefab, transform.position, Quaternion.identity);
+            diamondObj.GetComponent<Rigidbody2D>().AddForce(Vector2.up * UnityEngine.Random.Range(4f, 4.5f));
+            Diamond diamondScript = diamondObj.GetComponent<Diamond>();
+            diamondScript.SetDiamondValue(gems);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("An exception occurred in Enemy.SpawnDiamond: " + e.Message); 
+        }
+    }
+
+    #endregion
 }
