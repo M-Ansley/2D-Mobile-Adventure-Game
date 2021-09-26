@@ -42,6 +42,7 @@ public class Diamond : MonoBehaviour
     private void CollectDiamond(Player player)
     {
         player.Gems += _diamondVal;
+        GameEvents.current.GemsCollected(_diamondVal);
         Destroy(gameObject);
     }
 }
