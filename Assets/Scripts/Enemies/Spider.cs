@@ -46,7 +46,7 @@ public class Spider : Enemy, IDamageable
         animator.SetBool("Attacking", true);
         yield return new WaitForSecondsRealtime(time);
         animator.SetBool("Attacking", false);
-        StartCoroutine(AttackForTime(Random.Range(2f, 6f)));
+        StartCoroutine(AttackForTime(Random.Range(2f, 4f)));
     }
 
 

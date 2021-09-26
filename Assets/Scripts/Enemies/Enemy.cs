@@ -237,7 +237,7 @@ public abstract class Enemy : MonoBehaviour
         try
         {
             GameObject diamondObj = Instantiate(diamondPrefab, transform.position, Quaternion.identity);
-            diamondObj.GetComponent<Rigidbody2D>().AddForce(Vector2.up * UnityEngine.Random.Range(4f, 4.5f));
+            diamondObj.GetComponent<Rigidbody2D>().AddForce(Vector2.up * UnityEngine.Random.Range(100f, 150f));
             Diamond diamondScript = diamondObj.GetComponent<Diamond>();
             diamondScript.SetDiamondValue(gems);
         }
