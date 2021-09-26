@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     #region Variable_Declarations
+
     [Header("Enemy Properties (Common)")]
     [SerializeField] protected int health;
     [SerializeField] protected float speed = 2;
@@ -31,6 +33,8 @@ public abstract class Enemy : MonoBehaviour
     {
         Initialise(); // will in fact call the overridden version of this method in a child class
     }
+
+   // protected abstract void MyMethod();
 
     protected virtual void Initialise()
     {
@@ -131,21 +135,76 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-
-    #endregion
     protected void FacePlayer()
     {
-        Vector3 direction = player.transform.position - transform.position;
-        if (direction.x > 0)
+        try
         {
-            spriteRenderer.flipX = false;
+            Vector3 direction = player.transform.position - transform.position;
+            if (direction.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (direction.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
         }
-        else if (direction.x < 0)
+        catch (Exception e)
         {
-            spriteRenderer.flipX = true;
+            Debug.LogError("Exception in FacePlayer: " + e.Message);
         }
     }
 
+    protected bool ShouldFaceRight(int i)
+    {
+        try
+        {
+            switch (i)
+            {
+                // In relation to player pos
+                case 0:
+                    Vector3 direction = player.transform.position - transform.position;
+                    if (direction.x > 0)
+                    {
+                        return true;
+                    }
+                    else if (direction.x < 0)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                    break;
+
+                    // In regards to current direction
+                case 1:
+                    if (spriteRenderer.flipX)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                    break;
+                default:
+                    return false;
+                    break;
+            }
+           
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Exception in ShouldFaceRight: " + e.Message);
+            return true;
+        }
+    }
+
+    #endregion
+
+    #region Health
 
     public IEnumerator Die()
     {
@@ -159,5 +218,7 @@ public abstract class Enemy : MonoBehaviour
         }
         Destroy(transform.parent.gameObject);
     }
+
+    #endregion
 
 }
