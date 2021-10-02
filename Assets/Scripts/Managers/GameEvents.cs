@@ -7,7 +7,7 @@ public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
 
-    private void Start()
+    private void Awake()
     {
         current = this;
     }

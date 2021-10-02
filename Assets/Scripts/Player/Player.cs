@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static VariableContainer;
 
 public class Player : MonoBehaviour, IDamageable, IKillable
 {
@@ -41,6 +42,9 @@ public class Player : MonoBehaviour, IDamageable, IKillable
         get { return _gems; }
         set { _gems = value; }
     }
+
+    [Header("Inventory")]
+    public Dictionary<Item, int> _playerInventory = new Dictionary<Item, int>();
 
     #endregion
 
