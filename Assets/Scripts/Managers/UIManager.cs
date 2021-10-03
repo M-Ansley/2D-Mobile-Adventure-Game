@@ -81,7 +81,7 @@ public class UIManager : MonoBehaviour
             _shopUIGameObject.SetActive(true);
             _playerGemsText.text = Mathf.Clamp(_player.Gems, 0, 999) + "G";
 
-            Debug.Log(string.Format("Player has {0} gems", playerGems));
+           // Debug.Log(string.Format("Player has {0} gems", playerGems));
         }
     }
 

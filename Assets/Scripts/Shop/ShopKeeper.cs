@@ -35,7 +35,7 @@ public class ShopKeeper : MonoBehaviour
     public void SelectItem(Purchase_Option item)
     {
         selectedItem = item;
-        Debug.Log("You've selected: " + item.name);
+        // Debug.Log("You've selected: " + item.name);
 
         switch(selectedItem.shopId)
         {
@@ -65,12 +65,12 @@ public class ShopKeeper : MonoBehaviour
             UpdatePlayerInventory(new Item(selectedItem.itemType, selectedItem.price, selectedItem.name));
             
             UIManager.Instance.UpdateGemsDisplay();
-            Debug.Log(string.Format("Purchased {0} for {1}G", selectedItem.name, selectedItem.price));
+           // Debug.Log(string.Format("Purchased {0} for {1}G", selectedItem.name, selectedItem.price));
             UIManager.Instance.CloseShop();
         }
         else
         {
-            Debug.Log("Insufficient funds");
+           // Debug.Log("Insufficient funds");
             UIManager.Instance.CloseShop();
         }
     }
