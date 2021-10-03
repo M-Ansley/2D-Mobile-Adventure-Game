@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public class GameEvents : MonoBehaviour
@@ -18,7 +16,6 @@ public class GameEvents : MonoBehaviour
 
     }
         
-
     public MyIntEvent gemsCollected;
 
     public void GemsCollected(int numberOfGems)

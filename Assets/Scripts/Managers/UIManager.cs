@@ -106,7 +106,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            _gemsText.text = "";
+            _gemsText.text = string.Empty;
         }
 
         _playerGemsText.text = Mathf.Clamp(_player.Gems, 0, 999) + "G";

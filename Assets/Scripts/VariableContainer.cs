@@ -8,14 +8,14 @@ public static class VariableContainer
     public struct Purchase_Option
     {
         public int shopId;
-        public int itemID;
+        public ItemType itemType;
         public int price;
         public string name;
 
-        public Purchase_Option(int myShopId, int myItemId, int myPrice, string myName)
+        public Purchase_Option(int myShopId, ItemType myItemType, int myPrice, string myName)
         {
             shopId = myShopId;
-            itemID = myItemId;
+            itemType = myItemType;
             price = myPrice;
             name = myName;
         }
@@ -23,16 +23,24 @@ public static class VariableContainer
 
     public struct Item
     {
-        public int id;
+        public ItemType itemType;
         public int value;
         public string name;
 
-        public Item(int myID, int myValue, string myName)
+        public Item(ItemType myItemType, int myValue, string myName)
         {
-            id = myID;
+            itemType = myItemType;
             value = myValue;
             name = myName;
         }
+    }
+
+
+    public enum ItemType
+    {
+        FlameSword = 10,
+        BootsOfFlight = 11,
+        KeyToCastle = 12
     }
   
 }

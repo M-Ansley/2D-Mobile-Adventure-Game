@@ -62,7 +62,7 @@ public class ShopKeeper : MonoBehaviour
         if (_player.Gems >= selectedItem.price)
         {
             _player.Gems -= selectedItem.price;
-            UpdatePlayerInventory(new Item(selectedItem.itemID, selectedItem.price, selectedItem.name));
+            UpdatePlayerInventory(new Item(selectedItem.itemType, selectedItem.price, selectedItem.name));
             
             UIManager.Instance.UpdateGemsDisplay();
             Debug.Log(string.Format("Purchased {0} for {1}G", selectedItem.name, selectedItem.price));
@@ -70,6 +70,7 @@ public class ShopKeeper : MonoBehaviour
         else
         {
             Debug.Log("Insufficient funds");
+            UIManager.Instance.CloseShop();
         }
     }
 
@@ -78,12 +79,17 @@ public class ShopKeeper : MonoBehaviour
         int quanitity;
         if (_player._playerInventory.TryGetValue(item, out quanitity))
         {
-            _player._playerInventory[item] = quanitity++;
+            _player._playerInventory[item] = quanitity + 1;
         }
         else
         {
             _player._playerInventory.Add(item, 1);
+        }
 
+
+        if (item.itemType == ItemType.KeyToCastle) 
+        {
+            GameLogic.Instance.HasKeyToCastle = true;
         }
     }
 
