@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _gemsText;
     private Player _player;
 
+    [SerializeField] private List<GameObject> _healthUnits;
+
     private static UIManager _instance;
     public static UIManager Instance
     {
@@ -52,13 +54,13 @@ public class UIManager : MonoBehaviour
         _player = FindObjectOfType<Player>();
     }
 
-   private void GemsCollected(int numberOfGems)
+    private void GemsCollected(int numberOfGems)
     {
         try
         {
             if (numberOfGems > 0)
             {
-            _gemsText.text = Mathf.Clamp(_player.Gems, 0, 999).ToString();
+                _gemsText.text = Mathf.Clamp(_player.Gems, 0, 999).ToString();
             }
             else
             {
@@ -111,4 +113,68 @@ public class UIManager : MonoBehaviour
 
         _playerGemsText.text = Mathf.Clamp(_player.Gems, 0, 999) + "G";
     }
+
+
+    public void UpdateHealthDisplay()
+    {
+        try
+        {
+            RemoveNullUnits();
+            while (_healthUnits.Count < _player.Health)
+            {
+                GameObject previousUnit = _healthUnits[_healthUnits.Count - 1];
+                GameObject newUnit = Instantiate(previousUnit, previousUnit.transform.parent);
+                _healthUnits.Add(newUnit);
+            }
+
+            for (int i = 0; i < _healthUnits.Count; i++)
+            {
+                if (i < _player.Health)
+                {
+                    _healthUnits[i].SetActive(true);
+                }
+                else
+                {
+                    _healthUnits[i].SetActive(false);
+                }
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Exception in UIManager.UpdateHealthDisplay: " + e.Message);
+
+        }
+
+    }
+
+    private void RemoveNullUnits()
+    {
+        try
+        {
+            bool nullUnitsRemoved = false;
+            int index = 0;
+            while (!nullUnitsRemoved)
+            {
+                if (_healthUnits[index] != null) // if it's fine, proceed.
+                {
+                    index++;
+                }
+                else // if it's null remove it and stay on the same index
+                {
+                    _healthUnits.Remove(_healthUnits[index]);
+                }
+
+                if (index == _healthUnits.Count) // if 
+                {
+                    nullUnitsRemoved = true;
+                }
+            }
+        }
+        catch
+        {
+
+        }
+    }
+
+
 }

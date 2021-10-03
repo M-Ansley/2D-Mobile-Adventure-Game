@@ -66,6 +66,7 @@ public class ShopKeeper : MonoBehaviour
             
             UIManager.Instance.UpdateGemsDisplay();
             Debug.Log(string.Format("Purchased {0} for {1}G", selectedItem.name, selectedItem.price));
+            UIManager.Instance.CloseShop();
         }
         else
         {

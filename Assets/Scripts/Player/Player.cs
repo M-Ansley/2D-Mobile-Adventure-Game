@@ -26,12 +26,14 @@ public class Player : MonoBehaviour, IDamageable, IKillable
 
     [Header("Health")]
 
-    [SerializeField] private int _health = 10;
+    private int _health;
     public int Health
     {
         get { return _health; }
         set { _health = value; }
     }
+
+    [SerializeField] private int _MaxHealth = 4;
 
     private bool dying = false;
 
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour, IDamageable, IKillable
     {
         GetObjects();
         SetInitialValues();
+        UIManager.Instance.UpdateHealthDisplay();
     }
 
     private void GetObjects()
@@ -64,6 +67,7 @@ public class Player : MonoBehaviour, IDamageable, IKillable
 
     private void SetInitialValues()
     {
+        _health = _MaxHealth;
         Health = _health;
     }
 
@@ -72,6 +76,11 @@ public class Player : MonoBehaviour, IDamageable, IKillable
     #region Update
     void Update()
     {
+        if (dying)
+        {
+            return;
+        }
+
         Player_Movement();
         Player_Attack();
     }
@@ -209,7 +218,12 @@ public class Player : MonoBehaviour, IDamageable, IKillable
 
     public void Damage(int damageAmount = 1)
     {
+        if (dying)
+        {
+            return;
+        }
         Health -= damageAmount;
+        UIManager.Instance.UpdateHealthDisplay();
         if (Health < 1)
         {
             StartCoroutine(Die());
@@ -231,7 +245,7 @@ public class Player : MonoBehaviour, IDamageable, IKillable
         {
             yield return null;
         }
-        Destroy(gameObject);
+       // Destroy(gameObject);
     }
     #endregion
 }
