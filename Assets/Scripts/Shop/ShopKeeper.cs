@@ -7,7 +7,7 @@ public class ShopKeeper : MonoBehaviour
 {
     private Player _player;
 
-    private Purchase_Option selectedItem; 
+    private Item selectedItem; 
 
     private void Start()
     {
@@ -32,12 +32,12 @@ public class ShopKeeper : MonoBehaviour
         }
     }
 
-    public void SelectItem(Purchase_Option item)
+    public void SelectItem(Item item, int shopID)
     {
         selectedItem = item;
         // Debug.Log("You've selected: " + item.name);
 
-        switch(selectedItem.shopId)
+        switch(shopID)
         {
             case 0: // top-most item
                 UIManager.Instance.UpdateShopSelection(-29);
@@ -59,10 +59,10 @@ public class ShopKeeper : MonoBehaviour
     /// </summary>
     public void AttemptPurchase()
     {
-        if (_player.Gems >= selectedItem.price)
+        if (_player.Gems >= selectedItem.value)
         {
-            _player.Gems -= selectedItem.price;
-            UpdatePlayerInventory(new Item(selectedItem.itemType, selectedItem.price, selectedItem.name));
+            _player.Gems -= selectedItem.value;
+            UpdatePlayerInventory(selectedItem);
             
             UIManager.Instance.UpdateGemsDisplay();
            // Debug.Log(string.Format("Purchased {0} for {1}G", selectedItem.name, selectedItem.price));

@@ -5,22 +5,6 @@ using UnityEngine;
 public static class VariableContainer 
 {
     [System.Serializable]
-    public struct Purchase_Option
-    {
-        public int shopId;
-        public ItemType itemType;
-        public int price;
-        public string name;
-
-        public Purchase_Option(int myShopId, ItemType myItemType, int myPrice, string myName)
-        {
-            shopId = myShopId;
-            itemType = myItemType;
-            price = myPrice;
-            name = myName;
-        }
-    }
-
     public struct Item
     {
         public ItemType itemType;
@@ -35,12 +19,10 @@ public static class VariableContainer
         }
     }
 
-
     public enum ItemType
     {
         FlameSword = 10,
         BootsOfFlight = 11,
         KeyToCastle = 12
-    }
-  
+    }  
 }

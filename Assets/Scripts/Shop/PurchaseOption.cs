@@ -6,7 +6,7 @@ using TMPro;
 
 public class PurchaseOption : MonoBehaviour
 {
-    private ShopKeeper _shopkeeper;
+    [SerializeField] private ShopKeeper _shopkeeper;
 
     [SerializeField] private TextMeshProUGUI _itemText_Name;
     [SerializeField] private TextMeshProUGUI _itemText_Price;
@@ -14,8 +14,10 @@ public class PurchaseOption : MonoBehaviour
     [Tooltip("If true, sends this item to the shop keeper as the default item to purchase")]
     [SerializeField] private bool _defaultItem = false;
 
+    [SerializeField] private int _shopID = 0;
+
     [Header("Item Setup")]
-    public Purchase_Option item;
+    public Item item;
 
     private void Start()
     {
@@ -26,19 +28,16 @@ public class PurchaseOption : MonoBehaviour
         }
 
         _itemText_Name.text = item.name;
-        _itemText_Price.text = item.price + "G";
+        _itemText_Price.text = item.value + "G";
 
         if (_defaultItem)
         {
             SelectItem();
         }
-
     }
-
 
     public void SelectItem()
     {
-        _shopkeeper.SelectItem(item);
+        _shopkeeper.SelectItem(item, _shopID);
     }
-
 }
