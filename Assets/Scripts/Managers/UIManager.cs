@@ -10,9 +10,9 @@ public class UIManager : MonoBehaviour
     [Header("Variable Declarations")]
     [SerializeField] private GameObject _shopUIGameObject;
     [SerializeField] private Image _shopSelectionImage;
-    [SerializeField] private TextMeshProUGUI _playerGemsText;
+    [SerializeField] private TextMeshProUGUI _gemsText_shop;
 
-    [SerializeField] private TextMeshProUGUI _gemsText;
+    [SerializeField] private TextMeshProUGUI _gemsText_main;
     private Player _player;
 
     [SerializeField] private List<GameObject> _healthUnits;
@@ -60,11 +60,11 @@ public class UIManager : MonoBehaviour
         {
             if (numberOfGems > 0)
             {
-                _gemsText.text = Mathf.Clamp(_player.Gems, 0, 999).ToString();
+                _gemsText_main.text = Mathf.Clamp(_player.Gems, 0, 999).ToString();
             }
             else
             {
-                _gemsText.text = "";
+                _gemsText_main.text = "";
             }
         }
         catch (System.Exception e)
@@ -79,7 +79,7 @@ public class UIManager : MonoBehaviour
         if (_shopUIGameObject != null)
         {
             _shopUIGameObject.SetActive(true);
-            _playerGemsText.text = Mathf.Clamp(_player.Gems, 0, 999) + "G";
+            _gemsText_shop.text = Mathf.Clamp(_player.Gems, 0, 999) + "G";
 
            // Debug.Log(string.Format("Player has {0} gems", playerGems));
         }
@@ -93,25 +93,22 @@ public class UIManager : MonoBehaviour
         }
     }
 
-
     public void UpdateShopSelection(float yPos)
     {
         _shopSelectionImage.rectTransform.anchoredPosition = new Vector2(_shopSelectionImage.rectTransform.anchoredPosition.x, yPos);
-
     }
 
     public void UpdateGemsDisplay()
     {
         if (_player.Gems > 0)
         {
-            _gemsText.text = Mathf.Clamp(_player.Gems, 0, 999).ToString();
+            _gemsText_main.text = Mathf.Clamp(_player.Gems, 0, 999).ToString();
         }
         else
         {
-            _gemsText.text = string.Empty;
+            _gemsText_main.text = string.Empty;
         }
-
-        _playerGemsText.text = Mathf.Clamp(_player.Gems, 0, 999) + "G";
+        _gemsText_shop.text = Mathf.Clamp(_player.Gems, 0, 999) + "G";
     }
 
 

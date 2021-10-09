@@ -77,16 +77,14 @@ public class ShopKeeper : MonoBehaviour
 
     private void UpdatePlayerInventory(Item item)
     {
-        int quanitity;
-        if (_player._playerInventory.TryGetValue(item, out quanitity))
+        if (_player._playerInventory.TryGetValue(item, out int quanitity))
         {
-            _player._playerInventory[item] = quanitity + 1;
+            _player._playerInventory[item] = ++quanitity; // needs a "pre-increment unary operator", not a post-increment one
         }
         else
         {
             _player._playerInventory.Add(item, 1);
         }
-
 
         if (item.itemType == ItemType.KeyToCastle) 
         {
